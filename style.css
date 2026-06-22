@@ -1270,3 +1270,51 @@ footer {
     font-size: 12px;
   }
 }
+
+/* --- FIX VISIBILITY BUGS ON SUBPAGES --- */
+.pricing-card, .founder-card {
+  color: #1a1a2e;
+  --white: #111111;
+  --muted: #4b5563;
+}
+.pricing-card h3, .pricing-card p, .pricing-card div, .pricing-card span, .pricing-card li,
+.founder-card h3, .founder-card p, .founder-card div, .founder-card span, .founder-card li {
+  color: inherit;
+}
+.pricing-card .pricing-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111;
+  margin: 10px 0;
+}
+.pricing-card .pricing-badge {
+  background: #EFF6FF;
+  color: #185FA5;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+}
+.pricing-card .pricing-cta {
+  background: #25D366;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+.pricing-card .pricing-cta:hover {
+  background: #1BAD54;
+}
+.founder-card .founder-bio {
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
