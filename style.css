@@ -470,3 +470,400 @@ footer {
 .plan-card:hover { border-color: rgba(255,184,0,0.3); }
 .plan-card.selected { border-color: var(--gold); background: rgba(255,184,0,0.15); }
 
+/* PRICING SECTION */
+.pricing-section {
+  background: var(--bg);
+}
+.pricing-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+.pricing-header .section-sub {
+  margin: 0 auto;
+  font-style: italic;
+  color: var(--gold);
+  opacity: 0.85;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.pricing-card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+.pricing-card.popular {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(255, 184, 0, 0.04) 100%);
+  border: 1.8px solid var(--violet);
+}
+.pricing-card.monthly {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+.pricing-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.pricing-card.popular .pricing-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--violet);
+  color: #fff;
+  white-space: nowrap;
+}
+.pricing-card:not(.popular) .pricing-badge {
+  background: rgba(255, 184, 0, 0.1);
+  color: var(--gold);
+  border: 1px solid rgba(255, 184, 0, 0.2);
+}
+.pricing-card.monthly .pricing-badge {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--violet);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+.pricing-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.pricing-price .currency {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.pricing-price .amount {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.4rem;
+  line-height: 1;
+  color: var(--white);
+}
+.pricing-tagline {
+  font-size: 0.85rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.pricing-delivery {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.pricing-ideal {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+  font-size: 0.88rem;
+}
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pricing-features li.included .check {
+  color: #00e676;
+}
+.pricing-features li.excluded {
+  color: rgba(255, 255, 255, 0.3);
+}
+.pricing-features li.excluded .check {
+  color: rgba(255, 255, 255, 0.2);
+}
+.pricing-cta {
+  display: block;
+  text-align: center;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.pricing-cta:hover {
+  background: rgba(255, 184, 0, 0.1);
+  transform: translateY(-2px);
+}
+.pricing-card.popular .pricing-cta {
+  background: var(--gold);
+  color: #000;
+  border-color: var(--gold);
+  box-shadow: 0 4px 15px var(--gold-glow);
+}
+.pricing-card.popular .pricing-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--gold-glow);
+}
+.pricing-note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 8px;
+}
+.pricing-footer-note {
+  text-align: center;
+  max-width: 700px;
+  margin: 48px auto 0;
+  padding: 24px;
+  background: rgba(255, 184, 0, 0.04);
+  border: 1px solid rgba(255, 184, 0, 0.12);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+.pricing-footer-note strong {
+  color: var(--gold);
+}
+
+/* FAQ ACCORDION */
+.faq-section {
+  background: var(--bg2);
+}
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.faq-item:hover {
+  border-color: rgba(139, 92, 246, 0.25);
+}
+.faq-item.active {
+  border-color: rgba(255, 184, 0, 0.3);
+}
+.faq-question {
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.2s;
+}
+.faq-question:hover {
+  color: var(--gold);
+}
+.faq-question .faq-icon {
+  font-size: 1.2rem;
+  color: var(--gold);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+.faq-answer-inner {
+  padding: 0 24px 20px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+/* TESTIMONIAL CARDS */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  background: var(--bg3);
+  padding: 32px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 184, 0, 0.12);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 184, 0, 0.3);
+}
+.testimonial-stars {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+.testimonial-text {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.testimonial-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+.testimonial-role {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ABOUT PAGE STATS */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 700px;
+  margin: 48px auto;
+}
+.about-stat {
+  text-align: center;
+  padding: 28px 16px;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+}
+.about-stat .stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.8rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.about-stat .stat-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+}
+
+/* FOOTER SOCIAL LINKS */
+.footer-social {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.footer-social a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: var(--gold);
+}
+.footer-social a svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.footer-whatsapp-prominent {
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.footer-whatsapp-prominent a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-whatsapp-prominent a:hover {
+  color: var(--gold);
+}
+
+/* NAV INSTAGRAM ICON */
+.nav-instagram {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  transition: color 0.2s;
+  margin-right: 8px;
+}
+.nav-instagram:hover {
+  color: var(--gold);
+}
+.nav-instagram svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+@media (max-width: 900px) {
+  .nav-instagram {
+    display: none;
+  }
+}
+
+/* WHATSAPP FALLBACK TEXT */
+.wa-fallback {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.wa-fallback a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.wa-fallback a:hover {
+  color: var(--gold);
+}
