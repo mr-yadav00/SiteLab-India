@@ -21,6 +21,195 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="canonical" href="https://sitelabindia.in/services/">
+  <style>
+    /* Redesigned Pricing Cards */
+    .pricing-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .pricing-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .pricing-card {
+        width: calc(33.333% - 16px);
+      }
+    }
+    .pricing-card {
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #2a2a2a;
+      background: linear-gradient(145deg, #141414, #1a1a1a);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      margin-bottom: 24px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    .pricing-card:hover {
+      border-color: #7C3AED;
+      box-shadow: 0 0 30px rgba(124,58,237,0.15);
+    }
+    .pricing-card.popular:hover {
+      border-color: #06B6D4;
+    }
+    .pricing-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid #7C3AED;
+      color: #7C3AED;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    .pricing-card.popular .pricing-badge {
+      background: rgba(6,182,212,0.15);
+      border-color: #06B6D4;
+      color: #06B6D4;
+    }
+    .pricing-card.monthly .pricing-badge {
+      background: rgba(255,184,0,0.15);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .pricing-price {
+      font-size: 48px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .pricing-price .currency {
+      color: #7C3AED;
+      font-size: 36px;
+    }
+    .pricing-tagline {
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+    .pricing-delivery {
+      font-size: 13px;
+      color: #06B6D4;
+      margin-bottom: 20px;
+    }
+    .pricing-ideal {
+      font-size: 13px;
+      font-style: italic;
+      color: #888888;
+      margin-bottom: 20px;
+    }
+    .features-label {
+      color: #888888;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .features-label.excluded-label {
+      color: #555555;
+    }
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+    }
+    .features-group {
+      margin-bottom: 16px;
+    }
+    .features-group.excluded-group {
+      margin-top: 12px;
+    }
+    .features-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .features-group li {
+      padding: 8px 0;
+      border-bottom: 1px solid #1e1e1e;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #FFFFFF;
+    }
+    .features-group li:last-child {
+      border-bottom: none;
+    }
+    .features-group li .check {
+      color: #22C55E;
+      font-size: 15px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .features-group li.excluded {
+      color: #555555;
+    }
+    .features-group li.excluded .check {
+      color: #555555;
+    }
+    .pricing-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 52px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 28px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background: #1e1e1e;
+      border: 1px solid #7C3AED;
+      color: #7C3AED;
+    }
+    .pricing-card.affordable .pricing-cta {
+      background: linear-gradient(90deg, #7C3AED, #5B21B6);
+      color: white;
+      border: none;
+    }
+    .pricing-card.popular .pricing-cta {
+      background: linear-gradient(90deg, #06B6D4, #0891B2);
+      color: white;
+      border: none;
+    }
+    .pricing-cta:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(124,58,237,0.4);
+    }
+    .pricing-card.popular .pricing-cta:hover {
+      box-shadow: 0 0 20px rgba(6,182,212,0.4);
+    }
+    .pricing-note {
+      font-size: 12px;
+      color: #888;
+      margin-top: 12px;
+      font-style: italic;
+    }
+
+    @media (max-width: 480px) {
+      .pricing-card {
+        padding: 20px;
+      }
+      .pricing-price {
+        font-size: 40px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -71,123 +260,163 @@
     <div class="pricing-grid">
       
       <!-- QUICK LAUNCH -->
-      <div class="pricing-card">
+      <article class="pricing-card affordable" itemscope itemtype="https://schema.org/Offer">
         <div class="pricing-badge">⚡ Most Affordable</div>
-        <div class="pricing-price">
+        <div class="pricing-price" itemprop="price">
           <span class="currency">₹</span>
           <span class="amount">1,499</span>
         </div>
-        <div class="pricing-tagline">Kal tak online</div>
+        <div class="pricing-tagline" itemprop="name">Kal tak online</div>
         <div class="pricing-delivery">24-Hour Delivery</div>
         <p class="pricing-ideal">Ideal for: New businesses starting online</p>
-        <ul class="pricing-features">
-          <li class="included"><span class="check">✓</span> Single Page Professional Website</li>
-          <li class="included"><span class="check">✓</span> WhatsApp CTA Button</li>
-          <li class="included"><span class="check">✓</span> Mobile Responsive</li>
-          <li class="included"><span class="check">✓</span> Free GitHub Pages Hosting</li>
-          <li class="included"><span class="check">✓</span> Basic On-Page SEO</li>
-          <li class="excluded"><span class="check">✕</span> Custom Domain</li>
-          <li class="excluded"><span class="check">✕</span> Email Setup</li>
-          <li class="excluded"><span class="check">✕</span> Google Maps Embed</li>
-          <li class="excluded"><span class="check">✕</span> Multi-page</li>
-        </ul>
-        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Quick%20Launch%20%E2%82%B91%2C499%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta">💬 Start Quick Launch</a>
-      </div>
+        <div class="pricing-features" itemprop="description">
+          <div class="features-group">
+            <div class="features-label">Included</div>
+            <ul>
+              <li class="included"><span class="check">✓</span> Single Page Professional Website</li>
+              <li class="included"><span class="check">✓</span> WhatsApp CTA Button</li>
+              <li class="included"><span class="check">✓</span> Mobile Responsive</li>
+              <li class="included"><span class="check">✓</span> Free GitHub Pages Hosting</li>
+              <li class="included"><span class="check">✓</span> Basic On-Page SEO</li>
+            </ul>
+          </div>
+          <div class="features-group excluded-group">
+            <div class="features-label excluded-label">Not in this plan</div>
+            <ul>
+              <li class="excluded"><span class="check">✕</span> Custom Domain</li>
+              <li class="excluded"><span class="check">✕</span> Email Setup</li>
+              <li class="excluded"><span class="check">✕</span> Google Maps Embed</li>
+              <li class="excluded"><span class="check">✕</span> Multi-page</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Quick%20Launch%20%E2%82%B91%2C499%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Quick Launch Plan - ₹1499">💬 Start Quick Launch</a>
+      </article>
 
       <!-- PROFESSIONAL (POPULAR) -->
-      <div class="pricing-card popular">
+      <article class="pricing-card popular" itemscope itemtype="https://schema.org/Offer">
         <div class="pricing-badge">🔥 Most Popular</div>
-        <div class="pricing-price">
+        <div class="pricing-price" itemprop="price">
           <span class="currency">₹</span>
           <span class="amount">2,999</span>
         </div>
-        <div class="pricing-tagline">72 ghante mein ready</div>
+        <div class="pricing-tagline" itemprop="name">72 ghante mein ready</div>
         <div class="pricing-delivery">72-Hour Delivery</div>
         <p class="pricing-ideal">Ideal for: Doctors, Clinics, Gyms, Local Shops</p>
-        <ul class="pricing-features">
-          <li class="included"><span class="check">✓</span> Full Single Page Website</li>
-          <li class="included"><span class="check">✓</span> WhatsApp CTA + Enquiry</li>
-          <li class="included"><span class="check">✓</span> Mobile Responsive</li>
-          <li class="included"><span class="check">✓</span> Google Maps Embed</li>
-          <li class="included"><span class="check">✓</span> Basic Local SEO (Kota targeting)</li>
-          <li class="included"><span class="check">✓</span> Free GitHub Pages Hosting</li>
-          <li class="included"><span class="check">✓</span> Contact Form</li>
-          <li class="excluded"><span class="check">✕</span> Custom Domain</li>
-          <li class="excluded"><span class="check">✕</span> Business Email</li>
-          <li class="excluded"><span class="check">✕</span> Multi-page</li>
-        </ul>
-        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Professional%20%E2%82%B92%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta">💬 Start Professional</a>
-      </div>
+        <div class="pricing-features" itemprop="description">
+          <div class="features-group">
+            <div class="features-label">Included</div>
+            <ul>
+              <li class="included"><span class="check">✓</span> Full Single Page Website</li>
+              <li class="included"><span class="check">✓</span> WhatsApp CTA + Enquiry</li>
+              <li class="included"><span class="check">✓</span> Mobile Responsive</li>
+              <li class="included"><span class="check">✓</span> Google Maps Embed</li>
+              <li class="included"><span class="check">✓</span> Basic Local SEO (Kota targeting)</li>
+              <li class="included"><span class="check">✓</span> Free GitHub Pages Hosting</li>
+              <li class="included"><span class="check">✓</span> Contact Form</li>
+            </ul>
+          </div>
+          <div class="features-group excluded-group">
+            <div class="features-label excluded-label">Not in this plan</div>
+            <ul>
+              <li class="excluded"><span class="check">✕</span> Custom Domain</li>
+              <li class="excluded"><span class="check">✕</span> Business Email</li>
+              <li class="excluded"><span class="check">✕</span> Multi-page</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Professional%20%E2%82%B92%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Professional Plan - ₹2999">💬 Start Professional</a>
+      </article>
 
       <!-- BUSINESS -->
-      <div class="pricing-card">
+      <article class="pricing-card business" itemscope itemtype="https://schema.org/Offer">
         <div class="pricing-badge">🌐 Domain Included</div>
-        <div class="pricing-price">
+        <div class="pricing-price" itemprop="price">
           <span class="currency">₹</span>
           <span class="amount">4,999</span>
         </div>
-        <div class="pricing-tagline">Apna domain, apni identity</div>
+        <div class="pricing-tagline" itemprop="name">Apna domain, apni identity</div>
         <div class="pricing-delivery">72-Hour Delivery</div>
         <p class="pricing-ideal">Ideal for: Growing businesses wanting a proper domain</p>
-        <ul class="pricing-features">
-          <li class="included"><span class="check">✓</span> Full Single Page Website</li>
-          <li class="included"><span class="check">✓</span> Custom Domain (1 Year)</li>
-          <li class="included"><span class="check">✓</span> Business Email (Zoho Free)</li>
-          <li class="included"><span class="check">✓</span> WhatsApp CTA + Enquiry</li>
-          <li class="included"><span class="check">✓</span> Google Maps Embed</li>
-          <li class="included"><span class="check">✓</span> Local SEO Setup (Kota/Rajasthan)</li>
-          <li class="included"><span class="check">✓</span> Mobile Responsive</li>
-          <li class="included"><span class="check">✓</span> Free Hosting Included</li>
-          <li class="excluded"><span class="check">✕</span> Multi-page</li>
-          <li class="excluded"><span class="check">✕</span> Monthly Maintenance</li>
-        </ul>
-        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Business%20%E2%82%B94%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta">💬 Start Business</a>
-      </div>
+        <div class="pricing-features" itemprop="description">
+          <div class="features-group">
+            <div class="features-label">Included</div>
+            <ul>
+              <li class="included"><span class="check">✓</span> Full Single Page Website</li>
+              <li class="included"><span class="check">✓</span> Custom Domain (1 Year)</li>
+              <li class="included"><span class="check">✓</span> Business Email (Zoho Free)</li>
+              <li class="included"><span class="check">✓</span> WhatsApp CTA + Enquiry</li>
+              <li class="included"><span class="check">✓</span> Google Maps Embed</li>
+              <li class="included"><span class="check">✓</span> Local SEO Setup (Kota/Rajasthan)</li>
+              <li class="included"><span class="check">✓</span> Mobile Responsive</li>
+              <li class="included"><span class="check">✓</span> Free Hosting Included</li>
+            </ul>
+          </div>
+          <div class="features-group excluded-group">
+            <div class="features-label excluded-label">Not in this plan</div>
+            <ul>
+              <li class="excluded"><span class="check">✕</span> Multi-page</li>
+              <li class="excluded"><span class="check">✕</span> Monthly Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Business%20%E2%82%B94%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Business Plan - ₹4999">💬 Start Business</a>
+      </article>
 
       <!-- PREMIUM -->
-      <div class="pricing-card">
+      <article class="pricing-card premium" itemscope itemtype="https://schema.org/Offer">
         <div class="pricing-badge">⭐ Multi-Page</div>
-        <div class="pricing-price">
+        <div class="pricing-price" itemprop="price">
           <span class="currency">₹</span>
           <span class="amount">8,999</span>
         </div>
-        <div class="pricing-tagline">Poora digital presence</div>
+        <div class="pricing-tagline" itemprop="name">Poora digital presence</div>
         <div class="pricing-delivery">5-7 Days Delivery</div>
         <p class="pricing-ideal">Ideal for: Coaching institutes, hospitals, builders</p>
-        <ul class="pricing-features">
-          <li class="included"><span class="check">✓</span> Multi-Page Website (up to 5 pages)</li>
-          <li class="included"><span class="check">✓</span> Custom Domain (1 Year)</li>
-          <li class="included"><span class="check">✓</span> Business Email Setup</li>
-          <li class="included"><span class="check">✓</span> WhatsApp + Call CTA</li>
-          <li class="included"><span class="check">✓</span> Google Maps + Photo Gallery</li>
-          <li class="included"><span class="check">✓</span> Full Local SEO Setup</li>
-          <li class="included"><span class="check">✓</span> Schema Markup</li>
-          <li class="included"><span class="check">✓</span> 3 Months Support Included</li>
-          <li class="included"><span class="check">✓</span> Mobile Responsive</li>
-        </ul>
-        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Premium%20%E2%82%B98%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta">💬 Start Premium</a>
-      </div>
+        <div class="pricing-features" itemprop="description">
+          <div class="features-group">
+            <div class="features-label">Included</div>
+            <ul>
+              <li class="included"><span class="check">✓</span> Multi-Page Website (up to 5 pages)</li>
+              <li class="included"><span class="check">✓</span> Custom Domain (1 Year)</li>
+              <li class="included"><span class="check">✓</span> Business Email Setup</li>
+              <li class="included"><span class="check">✓</span> WhatsApp + Call CTA</li>
+              <li class="included"><span class="check">✓</span> Google Maps + Photo Gallery</li>
+              <li class="included"><span class="check">✓</span> Full Local SEO Setup</li>
+              <li class="included"><span class="check">✓</span> Schema Markup</li>
+              <li class="included"><span class="check">✓</span> 3 Months Support Included</li>
+              <li class="included"><span class="check">✓</span> Mobile Responsive</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Premium%20%E2%82%B98%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Premium Plan - ₹8999">💬 Start Premium</a>
+      </article>
 
       <!-- MONTHLY CARE -->
-      <div class="pricing-card monthly">
+      <article class="pricing-card monthly" itemscope itemtype="https://schema.org/Offer">
         <div class="pricing-badge">🔄 Recurring</div>
-        <div class="pricing-price">
+        <div class="pricing-price" itemprop="price">
           <span class="currency">₹</span>
           <span class="amount">299</span>
-          <span style="font-size: 1rem; color: var(--muted); margin-left: 4px;">/month</span>
+          <span style="font-size: 1rem; color: #888888; margin-left: 4px;">/month</span>
         </div>
-        <div class="pricing-tagline">Website hamesha fresh rakho</div>
+        <div class="pricing-tagline" itemprop="name">Website hamesha fresh rakho</div>
         <p class="pricing-ideal">Ideal for: Existing website owners</p>
-        <ul class="pricing-features">
-          <li class="included"><span class="check">✓</span> Monthly Content Updates</li>
-          <li class="included"><span class="check">✓</span> WhatsApp Number / Timing Changes</li>
-          <li class="included"><span class="check">✓</span> Basic SEO Monitoring</li>
-          <li class="included"><span class="check">✓</span> Speed Check</li>
-          <li class="included"><span class="check">✓</span> Emergency Bug Fix (1 per month)</li>
-        </ul>
+        <div class="pricing-features" itemprop="description">
+          <div class="features-group">
+            <div class="features-label">Included</div>
+            <ul>
+              <li class="included"><span class="check">✓</span> Monthly Content Updates</li>
+              <li class="included"><span class="check">✓</span> WhatsApp Number / Timing Changes</li>
+              <li class="included"><span class="check">✓</span> Basic SEO Monitoring</li>
+              <li class="included"><span class="check">✓</span> Speed Check</li>
+              <li class="included"><span class="check">✓</span> Emergency Bug Fix (1 per month)</li>
+            </ul>
+          </div>
+        </div>
         <p class="pricing-note">*Existing SiteLab clients ko priority support</p>
-        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Monthly%20Care%20%E2%82%B9299%20plan%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta">💬 Monthly Care Subscribe</a>
-      </div>
+        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Monthly%20Care%20%E2%82%B9299%20plan%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Monthly Care Plan - ₹299">💬 Monthly Care Subscribe</a>
+      </article>
 
     </div>
 
