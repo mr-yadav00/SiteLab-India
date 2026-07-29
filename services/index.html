@@ -256,7 +256,12 @@
   </section>
 
   <!-- PRICING PACKAGES GRID -->
-  <section class="pricing-section" style="padding-top: 40px;">
+    <div class="pricing-toggle" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px;">
+      <button id="btn-onetime-srv" class="btn-toggle active" onclick="switchPricingSrv('onetime')" style="padding: 10px 20px; border-radius: 20px; border: 1px solid var(--purple, #7C3AED); background: var(--purple, #7C3AED); color: white; cursor: pointer; font-weight: bold; font-family: inherit;">One-Time</button>
+      <button id="btn-monthly-srv" class="btn-toggle" onclick="switchPricingSrv('monthly')" style="padding: 10px 20px; border-radius: 20px; border: 1px solid var(--purple, #7C3AED); background: transparent; color: white; cursor: pointer; font-weight: bold; font-family: inherit;">Monthly</button>
+    </div>
+    
+    <div id="onetime-plans-srv">
     <div class="pricing-grid">
       
       <!-- QUICK LAUNCH -->
@@ -392,33 +397,144 @@
         <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Premium%20%E2%82%B98%2C999%20package%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Premium Plan - ₹8999">💬 Start Premium</a>
       </article>
 
-      <!-- MONTHLY CARE -->
-      <article class="pricing-card monthly" itemscope itemtype="https://schema.org/Offer">
-        <div class="pricing-badge">🔄 Recurring</div>
-        <div class="pricing-price" itemprop="price">
-          <span class="currency">₹</span>
-          <span class="amount">299</span>
-          <span style="font-size: 1rem; color: #888888; margin-left: 4px;">/month</span>
-        </div>
-        <div class="pricing-tagline" itemprop="name">Website hamesha fresh rakho</div>
-        <p class="pricing-ideal">Ideal for: Existing website owners</p>
-        <div class="pricing-features" itemprop="description">
-          <div class="features-group">
-            <div class="features-label">Included</div>
-            <ul>
-              <li class="included"><span class="check">✓</span> Monthly Content Updates</li>
-              <li class="included"><span class="check">✓</span> WhatsApp Number / Timing Changes</li>
-              <li class="included"><span class="check">✓</span> Basic SEO Monitoring</li>
-              <li class="included"><span class="check">✓</span> Speed Check</li>
-              <li class="included"><span class="check">✓</span> Emergency Bug Fix (1 per month)</li>
-            </ul>
-          </div>
-        </div>
-        <p class="pricing-note">*Existing SiteLab clients ko priority support</p>
-        <a href="https://wa.me/917878574692?text=Hello%20Kapil%20bhai%2C%20Monthly%20Care%20%E2%82%B9299%20plan%20ke%20baare%20mein%20baat%20karni%20thi" target="_blank" class="pricing-cta" aria-label="Monthly Care Plan - ₹299">💬 Monthly Care Subscribe</a>
-      </article>
-
     </div>
+    </div>
+
+    <!-- Monthly Plans -->
+    <div id="monthly-plans-srv" style="display: none;">
+      <h3 style="text-align: center; margin-bottom: 10px; font-size: 1.5rem;">Full Website: Monthly Handover</h3>
+      <p style="text-align: center; color: var(--muted, #a1a1aa); margin-bottom: 30px; font-size: 0.95rem;">Get a complete, professional website for a small monthly payment. After 3 months, it's 100% yours — code and hosting handed over, no strings attached.</p>
+      
+      <div class="pricing-grid">
+        <!-- STARTER MONTHLY -->
+        <article class="pricing-card affordable">
+          <div class="pricing-badge">Starter</div>
+          <div class="pricing-price">
+            <span class="currency">₹</span>
+            <span class="amount">599</span>
+            <span style="font-size: 1rem; color: #888888; margin-left: 4px;">/month</span>
+          </div>
+          <div class="pricing-features" style="margin-top: 20px;">
+            <div class="features-group">
+              <div class="features-label">Included</div>
+              <ul>
+                <li class="included"><span class="check">✓</span> 1-page custom website</li>
+                <li class="included"><span class="check">✓</span> WhatsApp CTA button</li>
+                <li class="included"><span class="check">✓</span> Mobile-first responsive design</li>
+                <li class="included"><span class="check">✓</span> Basic on-page SEO</li>
+                <li class="included"><span class="check">✓</span> 72-hour delivery</li>
+                <li class="included"><span class="check">✓</span> Free lifetime hosting</li>
+              </ul>
+            </div>
+          </div>
+          <a href="https://wa.me/917878574692?text=Hi%2C%20I%27m%20interested%20in%20the%20Starter%20Monthly%20plan" target="_blank" class="pricing-cta">Get Started →</a>
+        </article>
+
+        <!-- GROWTH MONTHLY -->
+        <article class="pricing-card popular">
+          <div class="pricing-badge">🔥 Most Popular - Growth</div>
+          <div class="pricing-price">
+            <span class="currency">₹</span>
+            <span class="amount">1,199</span>
+            <span style="font-size: 1rem; color: #888888; margin-left: 4px;">/month</span>
+          </div>
+          <div class="pricing-features" style="margin-top: 20px;">
+            <div class="features-group">
+              <div class="features-label">Included</div>
+              <ul>
+                <li class="included"><span class="check">✓</span> Everything in Starter</li>
+                <li class="included"><span class="check">✓</span> Up to 4 pages (Home / About / Services / Contact)</li>
+                <li class="included"><span class="check">✓</span> Google Maps + Google Business Profile setup</li>
+                <li class="included"><span class="check">✓</span> Photo gallery section</li>
+                <li class="included"><span class="check">✓</span> 1 free content update every month</li>
+              </ul>
+            </div>
+          </div>
+          <a href="https://wa.me/917878574692?text=Hi%2C%20I%27m%20interested%20in%20the%20Growth%20Monthly%20plan" target="_blank" class="pricing-cta">Get Started →</a>
+        </article>
+
+        <!-- PRO MONTHLY -->
+        <article class="pricing-card premium">
+          <div class="pricing-badge">Pro</div>
+          <div class="pricing-price">
+            <span class="currency">₹</span>
+            <span class="amount">1,999</span>
+            <span style="font-size: 1rem; color: #888888; margin-left: 4px;">/month</span>
+          </div>
+          <div class="pricing-features" style="margin-top: 20px;">
+            <div class="features-group">
+              <div class="features-label">Included</div>
+              <ul>
+                <li class="included"><span class="check">✓</span> Everything in Growth</li>
+                <li class="included"><span class="check">✓</span> Unlimited pages</li>
+                <li class="included"><span class="check">✓</span> Business email address (Zoho)</li>
+                <li class="included"><span class="check">✓</span> WhatsApp catalog / order button</li>
+                <li class="included"><span class="check">✓</span> Monthly content refresh</li>
+                <li class="included"><span class="check">✓</span> Priority same-day support</li>
+              </ul>
+            </div>
+          </div>
+          <a href="https://wa.me/917878574692?text=Hi%2C%20I%27m%20interested%20in%20the%20Pro%20Monthly%20plan" target="_blank" class="pricing-cta">Get Started →</a>
+        </article>
+      </div>
+      
+      <p style="text-align: center; color: var(--muted, #a1a1aa); font-size: 0.85rem; margin-top: 20px; margin-bottom: 50px;">
+        Minimum 3-month commitment. After your 3rd payment, we hand over full code + hosting access — the site is yours to keep whether or not you continue monthly. Domain name is not included (approx. ₹799–999/year) — buy it yourself or we'll arrange it at cost price; we connect it to your site for free either way.
+      </p>
+      
+      <h3 style="text-align: center; margin-bottom: 10px; font-size: 1.5rem;">SEO Only: Monthly</h3>
+      <p style="text-align: center; color: var(--muted, #a1a1aa); margin-bottom: 30px; font-size: 0.95rem;">Already have a website? Get monthly SEO care to bring in more customers.</p>
+      
+      <div class="pricing-grid" style="justify-content: center;">
+        <!-- SEO CARE -->
+        <article class="pricing-card business" style="max-width: 350px;">
+          <div class="pricing-badge">SEO Care</div>
+          <div class="pricing-price">
+            <span class="currency">₹</span>
+            <span class="amount">799</span>
+            <span style="font-size: 1rem; color: #888888; margin-left: 4px;">/month</span>
+          </div>
+          <div class="pricing-features" style="margin-top: 20px;">
+            <div class="features-group">
+              <div class="features-label">Included</div>
+              <ul>
+                <li class="included"><span class="check">✓</span> Google Business Profile optimization</li>
+                <li class="included"><span class="check">✓</span> On-page SEO improvements</li>
+                <li class="included"><span class="check">✓</span> Monthly ranking check-in report</li>
+                <li class="included"><span class="check">✓</span> WhatsApp support</li>
+                <li class="included"><span class="check">✓</span> Cancel anytime after month 1 — no long-term lock-in</li>
+              </ul>
+            </div>
+          </div>
+          <a href="https://wa.me/917878574692?text=Hi%2C%20I%27m%20interested%20in%20the%20SEO%20Care%20Monthly%20plan" target="_blank" class="pricing-cta">Get Started →</a>
+        </article>
+      </div>
+    </div>
+    
+    <script>
+    function switchPricingSrv(type) {
+      const onetime = document.getElementById('onetime-plans-srv');
+      const monthly = document.getElementById('monthly-plans-srv');
+      const btnOnetime = document.getElementById('btn-onetime-srv');
+      const btnMonthly = document.getElementById('btn-monthly-srv');
+      
+      if (type === 'onetime') {
+        onetime.style.display = 'block';
+        monthly.style.display = 'none';
+        btnOnetime.style.background = 'var(--purple, #7C3AED)';
+        btnOnetime.style.color = 'white';
+        btnMonthly.style.background = 'transparent';
+        btnMonthly.style.color = 'white';
+      } else {
+        onetime.style.display = 'none';
+        monthly.style.display = 'block';
+        btnMonthly.style.background = 'var(--purple, #7C3AED)';
+        btnMonthly.style.color = 'white';
+        btnOnetime.style.background = 'transparent';
+        btnOnetime.style.color = 'white';
+      }
+    }
+    </script>
 
     <div class="pricing-footer-note">
       <p><strong>📌 Payment Process:</strong> Pehle FREE demo dikhayenge → Approve karo → Tab payment → 24-72 ghante mein live</p>
