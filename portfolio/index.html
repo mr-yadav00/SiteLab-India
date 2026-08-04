@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="View live micro-website demos for gyms, clinics, hostels, and real estate prebuilt by SiteLab India. Verified portfolios for local small businesses.">
+  <meta name="description" content="View live micro-website demos for doctors, clinics, gyms, hostels, photographers, resorts, and more — prebuilt by SiteLab India. Verified portfolios for local businesses.">
   <title>Our Portfolio &amp; Demos Showcase — SiteLab India</title>
   
   <!-- Google tag (gtag.js) -->
@@ -70,9 +70,13 @@
   <section style="background: var(--bg); padding-top: 40px;">
     <!-- CATEGORY FILTER BUTTONS -->
     <div class="filter-group">
-      <button class="filter-btn active" onclick="filterCategory('all', this)">All Demos</button>
-      <button class="filter-btn" onclick="filterCategory('healthcare', this)">🩺 Wellness &amp; Clinics</button>
-      <button class="filter-btn" onclick="filterCategory('business', this)">🏢 Local Businesses</button>
+      <button class="filter-btn active" onclick="filterCategory('all', this)">✨ All Demos</button>
+      <button class="filter-btn" onclick="filterCategory('healthcare', this)">🩺 Doctors &amp; Clinics</button>
+      <button class="filter-btn" onclick="filterCategory('fitness', this)">💪 Gyms &amp; Fitness</button>
+      <button class="filter-btn" onclick="filterCategory('hostel', this)">🏠 Hostels &amp; PGs</button>
+      <button class="filter-btn" onclick="filterCategory('photography', this)">📸 Photography</button>
+      <button class="filter-btn" onclick="filterCategory('resort', this)">🏊 Resorts &amp; Hospitality</button>
+      <button class="filter-btn" onclick="filterCategory('business', this)">🏢 Other Businesses</button>
     </div>
 
     <div class="demos-grid" id="demosGrid">
@@ -99,7 +103,7 @@
       </a>
 
       <!-- GYM DEMO -->
-      <a href="https://mr-yadav00.github.io/YadavFitnessClub/" target="_blank" class="demo-card reveal visible" data-category="business" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+      <a href="https://mr-yadav00.github.io/YadavFitnessClub/" target="_blank" class="demo-card reveal visible" data-category="fitness" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
         <div class="demo-preview">
           <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Yadav Fitness Club Demo">
           <div class="demo-overlay"></div>
@@ -120,7 +124,7 @@
       </a>
 
       <!-- HOSTEL DEMO -->
-      <a href="https://mr-yadav00.github.io/Radha-Raman-Residency/" target="_blank" class="demo-card reveal visible" data-category="business" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+      <a href="https://mr-yadav00.github.io/Radha-Raman-Residency/" target="_blank" class="demo-card reveal visible" data-category="hostel" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
         <div class="demo-preview">
           <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80" alt="Radha Raman Residency Demo">
           <div class="demo-overlay"></div>
@@ -157,6 +161,48 @@
             <span class="demo-tag">Project Gallery</span>
             <span class="demo-tag">Work Highlights</span>
             <span class="demo-tag">Modern Gold Accents</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- PHOTOGRAPHY STUDIO -->
+      <a href="https://mr-yadav00.github.io/Brothers-studio/" target="_blank" class="demo-card reveal visible" data-category="photography" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80" alt="Brother's Studio Demo">
+          <div class="demo-overlay"></div>
+          <div class="demo-category">📸 Photography & Films</div>
+          <div class="demo-view-btn">View Demo ↗</div>
+        </div>
+        <div class="demo-info">
+          <h3>Brother's Studio</h3>
+          <p style="color:var(--muted);font-size:0.78rem;margin-bottom:6px">📍 Hazaribagh · Ranchi <span style="background:rgba(139,92,246,0.15);color:#a78bfa;font-size:0.65rem;padding:2px 8px;border-radius:20px;margin-left:6px;font-weight:600;">Pan-India</span></p>
+          <p>Cinematic wedding photography & film portfolio with package showcases, couple galleries, booking request flow, and Instagram integration.</p>
+          <div class="demo-tags">
+            <span class="demo-tag">Cinematic</span>
+            <span class="demo-tag">Wedding Films</span>
+            <span class="demo-tag">Portfolio Gallery</span>
+            <span class="demo-tag">Booking Flow</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- RESORT & HOSPITALITY -->
+      <a href="https://mr-yadav00.github.io/The-Pearl-Resort/" target="_blank" class="demo-card reveal visible" data-category="resort" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="The Pearl Resort Demo">
+          <div class="demo-overlay"></div>
+          <div class="demo-category">🏊 Resort & Hospitality</div>
+          <div class="demo-view-btn">View Demo ↗</div>
+        </div>
+        <div class="demo-info">
+          <h3>The Pearl Resort</h3>
+          <p style="color:var(--muted);font-size:0.78rem;margin-bottom:6px">📍 Mehrana, Kota, Rajasthan</p>
+          <p>Premium resort website with pool & banquet highlights, 51-room showcase, event booking, real Google reviews, and day-outing packages.</p>
+          <div class="demo-tags">
+            <span class="demo-tag">Room Gallery</span>
+            <span class="demo-tag">Event Booking</span>
+            <span class="demo-tag">Google Reviews</span>
+            <span class="demo-tag">Premium Design</span>
           </div>
         </div>
       </a>
@@ -218,11 +264,13 @@
           <a href="../contact/">Contact Us</a>
         </div>
         <div class="footer-links">
-          <h4>Target Sectors</h4>
-          <a href="../services/">Restaurants &amp; Cafes</a>
-          <a href="../services/">Real Estate &amp; Builders</a>
-          <a href="../services/">Student Hostels &amp; PGs</a>
-          <a href="../services/">Local Retail Shops</a>
+          <h4>Industry Focus</h4>
+          <a href="../services/">Doctors &amp; Clinics</a>
+          <a href="../services/">Gyms &amp; Fitness</a>
+          <a href="../services/">Hostels &amp; PGs</a>
+          <a href="../services/">Photography &amp; Events</a>
+          <a href="../services/">Resorts &amp; Hospitality</a>
+          <a href="../services/">Restaurants, Retail &amp; More</a>
         </div>
       </div>
     </div>
