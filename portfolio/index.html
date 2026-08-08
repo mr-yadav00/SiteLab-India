@@ -241,6 +241,10 @@
     </div>
   </section>
 
+  <div style="text-align: center; margin: 40px 0;">
+    <a href="../services/" class="wa-fallback" style="color: var(--gold); font-weight: 500;">Want Something Like This For Your Business? See Our Services →</a>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-content">
@@ -265,12 +269,12 @@
         </div>
         <div class="footer-links">
           <h4>Industry Focus</h4>
-          <a href="../services/">Doctors &amp; Clinics</a>
-          <a href="../services/">Gyms &amp; Fitness</a>
-          <a href="../services/">Hostels &amp; PGs</a>
-          <a href="../services/">Photography &amp; Events</a>
-          <a href="../services/">Resorts &amp; Hospitality</a>
-          <a href="../services/">Restaurants, Retail &amp; More</a>
+          <a href="../portfolio/#healthcare">Doctors &amp; Clinics</a>
+          <a href="../portfolio/#fitness">Gyms &amp; Fitness</a>
+          <a href="../portfolio/#hostel">Hostels &amp; PGs</a>
+          <a href="../portfolio/#photography">Photography &amp; Events</a>
+          <a href="../portfolio/#resort">Resorts &amp; Hospitality</a>
+          <a href="../portfolio/#business">Restaurants, Retail &amp; More</a>
         </div>
       </div>
     </div>
@@ -342,6 +346,19 @@
         }
       });
     }
+
+    // Hash-based load logic
+    window.addEventListener('DOMContentLoaded', () => {
+      const validCategories = ['healthcare', 'fitness', 'hostel', 'photography', 'resort', 'business'];
+      const hash = window.location.hash.replace('#', '');
+      if (validCategories.includes(hash)) {
+        // Find the matching button based on onclick string
+        const btn = Array.from(document.querySelectorAll('.filter-btn')).find(b => b.getAttribute('onclick').includes(`'${hash}'`));
+        if (btn) {
+          filterCategory(hash, btn);
+        }
+      }
+    });
   </script>
 </body>
 </html>
