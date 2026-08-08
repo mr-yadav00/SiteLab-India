@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>SiteLab India</title>
-    <script type="text/javascript">
-      // GitHub Pages SPA redirect fix
-      // Encodes the path into a query string so index.html can handle it
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | SiteLab India</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      body {
+        background-color: var(--bg, #0a0a0a);
+        color: var(--white, #ffffff);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: center;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 5rem;
+        margin-bottom: 0.5rem;
+        color: var(--gold, #ffb800);
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 2px;
+      }
+      p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        color: var(--muted, #a3a3a3);
+      }
+      .btn {
+        background: linear-gradient(135deg, var(--violet, #7C3AED), var(--cyan, #06B6D4));
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+      .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>404</h1>
+    <p>Arre, aap yahan kaise aa gaye? Ye page nahi mil raha.</p>
+    <a href="https://sitelabindia.in/" class="btn">Back to Home</a>
+  </body>
 </html>

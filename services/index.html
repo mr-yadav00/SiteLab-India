@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SiteLab India website packages — Quick Launch ₹1,499, Professional ₹2,999, Business ₹4,999, Premium ₹8,999. 72-hour delivery in Kota, Rajasthan.">
-  <title>Our Services &amp; Package Pricing — SiteLab India Kota</title>
+  <meta name="description" content="SiteLab India builds custom websites for doctors, gyms, hostels, photographers, resorts and local businesses in Kota. Free demo first, custom quotation, payment only after approval.">
+  <title>Our Services — SiteLab India Kota</title>
   
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-F005XN2Q2B"></script>
@@ -21,195 +21,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   <link rel="canonical" href="https://sitelabindia.in/services/">
-  <style>
-    /* Redesigned Pricing Cards */
-    .pricing-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    @media (min-width: 768px) {
-      .pricing-grid {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .pricing-card {
-        width: calc(33.333% - 16px);
-      }
-    }
-    .pricing-card {
-      padding: 32px;
-      border-radius: 16px;
-      border: 1px solid #2a2a2a;
-      background: linear-gradient(145deg, #141414, #1a1a1a);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-      margin-bottom: 24px;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-    }
-    .pricing-card:hover {
-      border-color: #7C3AED;
-      box-shadow: 0 0 30px rgba(124,58,237,0.15);
-    }
-    .pricing-card.popular:hover {
-      border-color: #06B6D4;
-    }
-    .pricing-badge {
-      display: inline-block;
-      align-self: flex-start;
-      background: rgba(124,58,237,0.15);
-      border: 1px solid #7C3AED;
-      color: #7C3AED;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 16px;
-    }
-    .pricing-card.popular .pricing-badge {
-      background: rgba(6,182,212,0.15);
-      border-color: #06B6D4;
-      color: #06B6D4;
-    }
-    .pricing-card.monthly .pricing-badge {
-      background: rgba(255,184,0,0.15);
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-    .pricing-card .pricing-price {
-      font-size: 48px;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin-top: 8px;
-      margin-bottom: 4px;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .pricing-card .pricing-price .currency {
-      color: #7C3AED;
-      font-size: 36px;
-    }
-    .pricing-card .pricing-tagline {
-      font-size: 16px;
-      font-weight: 600;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-    }
-    .pricing-card .pricing-delivery {
-      font-size: 13px;
-      color: #06B6D4;
-      margin-bottom: 20px;
-    }
-    .pricing-card .pricing-ideal {
-      font-size: 13px;
-      font-style: italic;
-      color: #888888;
-      margin-bottom: 20px;
-    }
-    .pricing-card .features-label {
-      color: #888888;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-    .pricing-card .features-label.excluded-label {
-      color: #555555;
-    }
-    .pricing-card .pricing-features {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      flex-grow: 1;
-    }
-    .pricing-card .features-group {
-      margin-bottom: 16px;
-    }
-    .pricing-card .features-group.excluded-group {
-      margin-top: 12px;
-    }
-    .pricing-card .features-group ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .pricing-card .features-group li {
-      padding: 8px 0;
-      border-bottom: 1px solid #1e1e1e;
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      color: #FFFFFF;
-    }
-    .pricing-card .features-group li:last-child {
-      border-bottom: none;
-    }
-    .pricing-card .features-group li .check {
-      color: #22C55E;
-      font-size: 15px;
-      margin-right: 10px;
-      font-weight: bold;
-    }
-    .pricing-card .features-group li.excluded {
-      color: #555555;
-    }
-    .features-group li.excluded .check {
-      color: #555555;
-    }
-    .pricing-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 52px;
-      border-radius: 10px;
-      font-size: 16px;
-      font-weight: 700;
-      margin-top: 28px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      background: #1e1e1e;
-      border: 1px solid #7C3AED;
-      color: #7C3AED;
-    }
-    .pricing-card.affordable .pricing-cta {
-      background: linear-gradient(90deg, #7C3AED, #5B21B6);
-      color: white;
-      border: none;
-    }
-    .pricing-card.popular .pricing-cta {
-      background: linear-gradient(90deg, #06B6D4, #0891B2);
-      color: white;
-      border: none;
-    }
-    .pricing-cta:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px rgba(124,58,237,0.4);
-    }
-    .pricing-card.popular .pricing-cta:hover {
-      box-shadow: 0 0 20px rgba(6,182,212,0.4);
-    }
-    .pricing-note {
-      font-size: 12px;
-      color: #888;
-      margin-top: 12px;
-      font-style: italic;
-    }
-
-    @media (max-width: 480px) {
-      .pricing-card {
-        padding: 20px;
-      }
-      .pricing-price {
-        font-size: 40px;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -232,7 +43,7 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       7878574692
     </a>
-    <a href="../#getstarted" class="nav-cta">Get Free Audit</a>
+    <a href="../#getstarted" class="nav-cta">Get Free Quotation</a>
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
@@ -251,8 +62,12 @@
   <!-- HEADER SECTION -->
   <section style="padding-top: 140px; padding-bottom: 60px; background: linear-gradient(180deg, rgba(8,8,17,1) 0%, rgba(14,15,32,1) 100%);">
     <div class="section-tag">Packages &amp; Value</div>
-    <h1 class="section-title">Transparent Pricing —<br><span style="color: var(--gold);">No Surprises</span></h1>
+    <h1 class="section-title">Built For Your Business —<br><span style="color: var(--gold);">Priced For Your Budget</span></h1>
     <p class="section-sub" style="font-style: italic; color: var(--gold); opacity: 0.85;">Sabhi packages mein: free demo pehle, payment baad mein. Sirf approve karo toh paisa do.</p>
+    <div style="max-width: 600px; margin: 20px auto 0; text-align: center; background: var(--bg2); padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);">
+      <h2 style="font-size: 1.15rem; font-family: 'Outfit', sans-serif; color: var(--white); margin-bottom: 6px;">Why It Matters: Bina Website Ke, Aap Invisible Ho</h2>
+      <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.6;">Naye customers aur students Kota aate hi Google pe search karte hain. Social media reach limit karta hai, par website 100% aapki hai aur direct WhatsApp inquiries laati hai.</p>
+    </div>
   </section>
 
   <!-- SERVICES GRID -->
@@ -264,7 +79,7 @@
         <p class="pricing-tagline" style="margin-top:16px;">Ek professional single-page website jo turant online le aaye. WhatsApp integration, mobile-responsive, Google pe visible.</p>
       </article>
 
-      <article class="pricing-card popular">
+      <article class="pricing-card pricing-card--popular">
         <div class="pricing-badge">📄 Multi-Page Website</div>
         <p class="pricing-tagline" style="margin-top:16px;">Bade business ke liye — Home, About, Services, Gallery, Contact — sab alag pages ke saath poora digital presence.</p>
       </article>
@@ -279,7 +94,7 @@
         <p class="pricing-tagline" style="margin-top:16px;">Google Maps, Google Business Profile, aur local SEO — taaki Kota mein customers aapko dhoondh saken.</p>
       </article>
 
-      <article class="pricing-card popular">
+      <article class="pricing-card pricing-card--popular">
         <div class="pricing-badge">🔧 Monthly Care &amp; Maintenance</div>
         <p class="pricing-tagline" style="margin-top:16px;">Ongoing updates aur technical support, chhoti monthly fee mein — poora control aapke paas.</p>
       </article>
@@ -388,7 +203,7 @@
         <div class="footer-links">
           <h4>Studio</h4>
           <a href="../">Home</a>
-          <a href="../services/">Services Package</a>
+          <a href="../services/">Services</a>
           <a href="../portfolio/">Our Work</a>
           <a href="../about/">About Us</a>
           <a href="../contact/">Contact Us</a>

@@ -414,7 +414,7 @@ footer {
    ============================================ */
 .founder-section {
   padding: 80px 0;
-  background: #ffffff;
+  background: var(--bg2);
 }
 
 .founder-card {
@@ -422,8 +422,8 @@ footer {
   grid-template-columns: 320px 1fr;
   gap: 60px;
   align-items: start;
-  background: #f8f9fb;
-  border: 1.5px solid #e5e7eb;
+  background: var(--bg3);
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 20px;
   padding: 48px;
   max-width: 1000px;
@@ -457,8 +457,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--bg3);
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 999px;
   padding: 5px 12px;
   font-size: 11.5px;
@@ -519,8 +519,8 @@ footer {
   display: flex;
   align-items: center;
   gap: 0;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
+  background: var(--bg3);
+  border: 1px solid rgba(255,255,255,0.05);
   border-radius: 12px;
   padding: 16px 12px;
   width: 100%;
@@ -734,8 +734,8 @@ footer {
 .pricing-card {
   position: relative;
   border-radius: 16px;
-  background: #ffffff;
-  border: 1.5px solid #e5e7eb;
+  background: var(--bg3);
+  border: 1px solid rgba(255,255,255,0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
@@ -753,8 +753,8 @@ footer {
 
 /* Popular card accent */
 .pricing-card--popular {
-  border: 2px solid #185FA5;
-  background: #ffffff;
+  border: 2px solid var(--violet);
+  background: var(--bg3);
 }
 
 .popular-ribbon {
@@ -1274,9 +1274,10 @@ footer {
 
 /* --- FIX VISIBILITY BUGS ON SUBPAGES --- */
 .pricing-card, .founder-card {
-  color: #1a1a2e;
-  --white: #111111;
-  --muted: #4b5563;
+  color: var(--white);
+  --white: #ffffff;
+  --muted: #a3a3a3;
+  background: var(--bg3);
 }
 .pricing-card h3, .pricing-card p, .pricing-card div, .pricing-card span, .pricing-card li,
 .founder-card h3, .founder-card p, .founder-card div, .founder-card span, .founder-card li {
@@ -1285,12 +1286,12 @@ footer {
 .pricing-card .pricing-price {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #111;
+  color: var(--white);
   margin: 10px 0;
 }
 .pricing-card .pricing-badge {
-  background: #EFF6FF;
-  color: #185FA5;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--violet);
   padding: 4px 10px;
   border-radius: 6px;
   font-weight: 600;
@@ -1299,7 +1300,7 @@ footer {
   font-size: 0.85rem;
 }
 .pricing-card .pricing-cta {
-  background: #25D366;
+  background: var(--violet);
   color: #fff;
   padding: 12px 20px;
   border-radius: 8px;
@@ -1310,10 +1311,10 @@ footer {
   margin-top: 15px;
 }
 .pricing-card .pricing-cta:hover {
-  background: #1BAD54;
+  background: #5B21B6;
 }
 .founder-card .founder-bio {
-  color: #374151;
+  color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 12px;
