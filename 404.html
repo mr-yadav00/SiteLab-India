@@ -4,56 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | SiteLab India</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <style>
       body {
-        background-color: var(--ink, #0B0E14);
-        color: var(--text-on-dark, #F3F6FB);
+        background-color: var(--bg, #0a0a0a);
+        color: var(--white, #ffffff);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         min-height: 100vh;
         margin: 0;
-        font-family: var(--font-body), sans-serif;
+        font-family: system-ui, -apple-system, sans-serif;
         text-align: center;
         padding: 2rem;
       }
       h1 {
         font-size: 5rem;
         margin-bottom: 0.5rem;
-        color: var(--gold, #FFB800);
-        font-family: var(--font-display), serif;
-        letter-spacing: -1px;
+        color: var(--gold, #ffb800);
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 2px;
       }
       p {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
         margin-bottom: 2rem;
-        color: var(--text-on-dark-muted, #9AA9C4);
+        color: var(--muted, #a3a3a3);
       }
       .btn {
-        background: var(--gold, #FFB800);
-        color: #000000;
-        padding: 0.85rem 1.8rem;
-        border-radius: 10px;
+        background: linear-gradient(135deg, var(--violet, #7C3AED), var(--cyan, #06B6D4));
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
         text-decoration: none;
-        font-weight: 700;
-        font-family: var(--font-body);
-        transition: transform 0.2s, box-shadow 0.2s;
-        display: inline-block;
+        font-weight: 600;
+        transition: transform 0.2s, opacity 0.2s;
       }
       .btn:hover {
+        opacity: 0.9;
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px var(--gold-glow, rgba(255,184,0,0.3));
       }
     </style>
   </head>
   <body>
     <h1>404</h1>
     <p>Arre, aap yahan kaise aa gaye? Ye page nahi mil raha.</p>
-    <a href="https://sitelabindia.in/" class="btn">Back to Home →</a>
+    <a href="https://sitelabindia.in/" class="btn">Back to Home</a>
   </body>
 </html>
