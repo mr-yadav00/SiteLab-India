@@ -189,10 +189,10 @@ section {
   color: var(--muted); font-size: 1.05rem; line-height: 1.7; max-width: 550px;
 }
 .reveal {
-  opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1; transform: none; transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .reveal.visible {
-  opacity: 1; transform: translateY(0);
+  opacity: 1; transform: none;
 }
 
 /* BUTTONS */
@@ -457,19 +457,19 @@ footer {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: var(--bg3);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 999px;
   padding: 5px 12px;
   font-size: 11.5px;
-  color: #374151;
+  color: #F3F4F6 !important;
   font-weight: 500;
   position: absolute;
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .badge-dot {
@@ -494,13 +494,13 @@ footer {
 .founder-name {
   font-size: 22px;
   font-weight: 700;
-  color: #0f1923;
+  color: #FFFFFF !important;
   margin-bottom: 4px;
 }
 
 .founder-title {
   font-size: 13.5px;
-  color: #185FA5;
+  color: var(--gold) !important;
   font-weight: 600;
   margin-bottom: 6px;
 }
@@ -511,7 +511,7 @@ footer {
   justify-content: center;
   gap: 4px;
   font-size: 12.5px;
-  color: #6b7280;
+  color: #9CA3AF !important;
 }
 
 /* Stats row */
@@ -520,7 +520,7 @@ footer {
   align-items: center;
   gap: 0;
   background: var(--bg3);
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 16px 12px;
   width: 100%;
@@ -535,14 +535,14 @@ footer {
   display: block;
   font-size: 20px;
   font-weight: 800;
-  color: #0f1923;
+  color: var(--gold) !important;
   line-height: 1;
   margin-bottom: 4px;
 }
 
 .stat-label {
   font-size: 10.5px;
-  color: #6b7280;
+  color: #9CA3AF !important;
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -550,7 +550,7 @@ footer {
 .stat-divider {
   width: 1px;
   height: 36px;
-  background: #e5e7eb;
+  background: rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
 }
 
@@ -562,25 +562,26 @@ footer {
 }
 
 .founder-eyebrow {
-  font-size: 11.5px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #185FA5;
+  color: var(--gold) !important;
 }
 
 .founder-heading {
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 700;
-  color: #0f1923;
+  color: #FFFFFF !important;
   line-height: 1.25;
 }
 
 .founder-quote {
   font-size: 15px;
   line-height: 1.8;
-  color: #374151;
-  border-left: 3px solid #185FA5;
+  color: #E2E8F0 !important;
+  border-left: 3px solid var(--gold);
   padding-left: 20px;
   margin: 0;
   font-style: normal;
@@ -595,12 +596,13 @@ footer {
 
 .skill-tag {
   font-size: 12px;
-  font-weight: 500;
-  padding: 5px 12px;
+  font-weight: 700;
+  padding: 6px 14px;
   border-radius: 999px;
-  background: #EFF6FF;
-  color: #185FA5;
-  border: 1px solid #BFDBFE;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Actions */
@@ -773,21 +775,36 @@ footer {
   text-align: center;
 }
 
-/* Plan badge */
-.plan-badge {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 6px;
-  margin-bottom: 20px;
+/* Consolidated Badge / Pill Component */
+.badge-pill,
+.plan-badge,
+.pricing-badge,
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
   width: fit-content;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-.plan-badge--basic   { background: #f3f4f6; color: #374151; }
-.plan-badge--popular { background: #EFF6FF; color: #185FA5; }
-.plan-badge--premium { background: #FFF7ED; color: #92400E; }
+.plan-badge--basic,
+.plan-badge--popular,
+.plan-badge--premium {
+  background: #FFFFFF !important;
+  color: #111827 !important;
+}
 
 /* Price display */
 .plan-price {
@@ -1272,33 +1289,31 @@ footer {
   }
 }
 
-/* --- FIX VISIBILITY BUGS ON SUBPAGES --- */
-.pricing-card, .founder-card {
+/* --- CLEAN SUBPAGE & CARD STYLES --- */
+.pricing-card {
   color: var(--white);
-  --white: #ffffff;
-  --muted: #a3a3a3;
   background: var(--bg3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
-.pricing-card h3, .pricing-card p, .pricing-card div, .pricing-card span, .pricing-card li,
-.founder-card h3, .founder-card p, .founder-card div, .founder-card span, .founder-card li {
-  color: inherit;
+
+.pricing-card h3 {
+  color: #FFFFFF;
 }
+
+.pricing-tagline,
+.plan-tagline {
+  color: #D1D5DB !important;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
 .pricing-card .pricing-price {
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--white);
   margin: 10px 0;
 }
-.pricing-card .pricing-badge {
-  background: rgba(124, 58, 237, 0.15);
-  color: var(--violet);
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 0.85rem;
-}
+
 .pricing-card .pricing-cta {
   background: var(--violet);
   color: #fff;
@@ -1313,8 +1328,19 @@ footer {
 .pricing-card .pricing-cta:hover {
   background: #5B21B6;
 }
+
+.founder-card {
+  background: var(--bg3);
+  color: var(--white);
+}
+
+.founder-card h2,
+.founder-card h3 {
+  color: #FFFFFF !important;
+}
+
 .founder-card .founder-bio {
-  color: var(--muted);
+  color: #D1D5DB !important;
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 12px;
